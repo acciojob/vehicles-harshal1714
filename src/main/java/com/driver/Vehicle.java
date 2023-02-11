@@ -7,8 +7,9 @@ public class Vehicle {
     private int currentDirection;
 
     public Vehicle(String name) {
-this.currentSpeed=currentSpeed;
-this.currentDirection=0;
+        this.name=name;
+         this.currentSpeed=0;
+         this.currentDirection=0;
     }
 
     public String getName() {
@@ -36,14 +37,14 @@ this.currentDirection=0;
     }
 
     public void steer(int direction){
-        currentDirection+=direction;
+        this.currentDirection+=direction;
         //direction is in degrees, add it to the current direction
         System.out.println("steer method called - The direction is changed to: " + currentDirection + " degrees");
     }
 
     public void move(int speed, int direction){
-        this.currentSpeed=currentSpeed;
-        this.currentDirection=currentDirection;
+        this.currentSpeed=speed;
+        this.currentDirection=direction;
         //set the values of currentSpeed and currentDirection
         System.out.println("move method called - The speed is changed to: " + currentSpeed + ", and the direction is changed to: " + currentDirection + " degrees");
     }
@@ -52,5 +53,4 @@ this.currentDirection=0;
 this.currentSpeed=0;
         System.out.println("stop method called - The vehicle is stopped");
     }
-
 }
