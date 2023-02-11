@@ -21,7 +21,15 @@ public class Car extends Vehicle {
         this.seats = seats;
         currentGear = 1;
     }
+    public void changeGear(int newGear){
+        currentGear=newGear;
+        System.out.println("changeGear method called - The gear is changed to: " + currentGear);
+    }
 
+    public void changeSpeed(int newSpeed, int newDirection){
+        move(newSpeed,newDirection);
+        System.out.println("changeSpeed method called - The speed is changed to: " + newSpeed + ", and the direction is changed to: " + newDirection + " degrees");
+    }
     public int getWheels() {
         return wheels;
     }
@@ -76,15 +84,5 @@ public class Car extends Vehicle {
 
     public void setSeats(int seats) {
         this.seats = seats;
-    }
-
-    public void changeGear(int newGear){
-        currentGear=newGear;
-        System.out.println("changeGear method called - The gear is changed to: " + currentGear);
-    }
-
-    public void changeSpeed(int newSpeed, int newDirection){
-           move(newSpeed,newDirection);
-        System.out.println("changeSpeed method called - The speed is changed to: " + newSpeed + ", and the direction is changed to: " + newDirection + " degrees");
     }
 }
